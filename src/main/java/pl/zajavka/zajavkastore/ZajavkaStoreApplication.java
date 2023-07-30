@@ -10,7 +10,7 @@ public class ZajavkaStoreApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
-        NamedQueriesService someService = context.getBean(NamedQueriesService.class);
+        SomeService someService = context.getBean(SomeService.class);
         someService.call();
     }
 }
