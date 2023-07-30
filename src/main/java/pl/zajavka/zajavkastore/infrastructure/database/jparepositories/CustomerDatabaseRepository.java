@@ -14,4 +14,12 @@ public interface CustomerDatabaseRepository extends JpaRepository <CustomerEntit
     List<CustomerEntity> findByNameOrEmail(String name, String email);
     List<CustomerEntity> findByNameAndEmail(String name, String email);
     CustomerEntity findDistinctByEmail(String email);
+
+    // Named Queries
+    List<CustomerEntity> findAllCustomers();
+    CustomerEntity findCustomerByEmail(String email);
+
+    // Named Native Queries
+    List<CustomerEntity> findAllCustomersNNQ();
+    CustomerEntity findCustomerByEmailNNQ(String email);
 }
